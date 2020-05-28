@@ -65,5 +65,4 @@ Where the `@task@` is either `build` or `watch`.
 All plugins we use are installed via Composer:
 
 * [`etc_cache`](https://github.com/etc-plugins/etc_cache) ✓ Composer
-* [`etc_pagination`](https://github.com/etc-plugins/etc_pagination) ✓ Composer
 * [`smd_thumbnail`](https://github.com/bloke/smd_thumbnail) ✓ Composer
