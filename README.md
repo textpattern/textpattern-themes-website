@@ -1,7 +1,9 @@
 # Textpattern themes website
 
-[![Greenkeeper](https://badges.greenkeeper.io/textpattern/textpattern-themes-website.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.com/textpattern/textpattern-themes-website.svg)](https://travis-ci.com/textpattern/textpattern-themes-website)
+[![Known Vulnerabilities](https://snyk.io/test/github/textpattern/textpattern-themes-website/badge.svg?targetFile=package.json)](https://snyk.io/test/github/textpattern/textpattern-themes-website?targetFile=package.json)
+[![Dependencies Status](https://david-dm.org/textpattern/textpattern-themes-website/status.svg)](https://david-dm.org/textpattern/textpattern-themes-website)
+[![devDependencies Status](https://david-dm.org/textpattern/textpattern-themes-website/dev-status.svg)](https://david-dm.org/textpattern/textpattern-themes-website?type=dev)
 
 **CURRENTLY UNDER DEVELOPMENT**
 
