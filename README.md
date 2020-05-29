@@ -68,3 +68,7 @@ All plugins we use are installed via Composer:
 
 * [`etc_cache`](https://github.com/etc-plugins/etc_cache) ✓ Composer
 * [`smd_thumbnail`](https://github.com/bloke/smd_thumbnail) ✓ Composer
+
+## License
+
+Licensed under the [GPLv2 license](https://github.com/textpattern/textpattern-themes-website/blob/master/LICENSE).
