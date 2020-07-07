@@ -5,7 +5,7 @@
 
 **CURRENTLY UNDER DEVELOPMENT**
 
-Official 2019+ themes website of the [Textpattern](https://textpattern.com/) project. **Requires Textpattern 4.8.1 or later.**
+Official 2020+ themes website of the [Textpattern](https://textpattern.com/) project. **Requires Textpattern 4.8.1 or later.**
 
 ## Supported web browsers
 
@@ -59,6 +59,10 @@ Where the `@task@` is either `build` or `watch`.
 
 * The `build` task builds the project.
 * The `watch` task will launch a task that watches for file changes; the project is then automatically built if a source file is modified.
+
+## Shortcodes
+
+TODO
 
 ## Plugins used
 

@@ -50,13 +50,7 @@ module.exports = function (grunt)
                         expand: true,
                         cwd: 'src/assets/img/',
                         src: '**',
-                        dest: '<%= paths.dest.img %>themes/'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'node_modules/textpattern-branding/assets/img/',
-                        src: '**',
-                        dest: '<%= paths.dest.img %>branding/'
+                        dest: '<%= paths.dest.img %>'
                     },
                     {
                         expand: true,

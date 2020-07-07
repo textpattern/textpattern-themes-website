@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-GB-oxendict">
+<head>
+    <txp:output_form form="head" />
+    <txp:if_article_list>
+        <txp:article pgonly limit="12" />
+        <title>Authors list / Textpattern CMS themes</title>
+        <meta name="description" content="The authors responsible for creating the various third-party themes available for Textpattern CMS.">
+        <txp:variable name="page" value='<txp:page_url type="pg" />' />
+        <txp:if_variable name="page" value="1">
+            <meta name="robots" content="index, follow">
+            <link rel="canonical" href="<txp:site_url />authors/">
+            <meta name="twitter:card" content="summary">
+            <meta name="twitter:site" content="@textpattern">
+            <meta name="twitter:title" content="Theme authors list">
+            <meta name="twitter:description" content="The authors responsible for creating the various third-party themes available for Textpattern CMS.">
+            <meta name="twitter:image:src" content="https://textpattern.com/apple-touch-icon-180x180.png">
+            <meta name="twitter:url" content="<txp:site_url />authors/">
+            <meta property="og:site_name" content="Textpattern CMS">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="Theme authors list">
+            <meta property="og:description" content="The authors responsible for creating the various third-party themes available for Textpattern CMS.">
+            <meta property="og:image" content="https://textpattern.com/assets/img/branding/textpattern/textpattern-og.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="1200">
+            <meta property="og:image:alt" content="Textpattern logo">
+            <meta property="og:url" content="<txp:site_url />authors/">
+            <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "CollectionPage",
+                    "headline": "Theme authors list",
+                    "description": "The authors responsible for creating the various third-party themes available for Textpattern CMS.",
+                    "url": "<txp:site_url escape="json" />authors/"
+                }
+            </script>
+        <txp:else />
+            <meta name="robots" content="noindex, follow">
+        </txp:if_variable>
+        <txp:evaluate test>
+            <link rel="prev" href="<txp:newer />">
+        </txp:evaluate>
+        <txp:evaluate test>
+            <link rel="next" href="<txp:older />">
+        </txp:evaluate>
+    <txp:else />
+        <title>Author: <txp:title /> / Textpattern CMS themes</title>
+        <txp:meta_description />
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="<txp:permlink />">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@textpattern">
+        <meta name="twitter:title" content="Author: <txp:title />">
+        <meta name="twitter:description" content="<txp:meta_description format="" />">
+        <meta name="twitter:url" content="<txp:permlink />">
+        <meta property="og:site_name" content="Textpattern CMS plugins">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Author: <txp:title />">
+        <meta property="og:description" content="<txp:meta_description format="" />">
+        <meta property="og:url" content="<txp:permlink />">
+        <txp:if_article_image>
+            <txp:images limit="1">
+                <meta name="twitter:image:src" content="<txp:image_url />">
+                <meta property="og:image" content="<txp:image_url />">
+                <meta property="og:image:width" content="<txp:image_info type="w" />">
+                <meta property="og:image:height" content="<txp:image_info type="h" />">
+                <meta property="og:image:alt" content="<txp:image_info type="alt" />">
+            </txp:images>
+        <txp:else />
+            <meta name="twitter:image:src" content="https://textpattern.com/apple-touch-icon-180x180.png">
+            <meta property="og:image" content="https://textpattern.com/assets/img/branding/textpattern/textpattern-og.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="1200">
+            <meta property="og:image:alt" content="Textpattern logo">
+        </txp:if_article_image>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "headline": "Author: <txp:title escape="json" />",
+                "description": "<txp:meta_description format="" escape="json" />",
+                "url": "<txp:permlink escape="json" />"
+            }
+        </script>
+    </txp:if_article_list>
+</head>
+<txp:if_article_list>
+    <body itemscope itemtype="https://schema.org/CollectionPage">
+<txp:else />
+    <body itemscope itemtype="https://schema.org/WebPage">
+</txp:if_article_list>
+    <txp:output_form form="body_header" />
+    <main aria-label="Main content">
+        <div class="container">
+            <txp:output_form form="body_crumbs" />
+            <txp:if_article_list>
+                <h1 itemprop="name">Authors list (by plugin prefix)</h1>
+                <p><strong>Browse all plugins authors (<txp:article_custom pgonly pageby="1" section="authors" /> in total) by prefix, listed alphabetically</a>…</strong></p>
+                <txp:article sort="custom_2" breakby="alpha_list_break" breakform="alpha_list_form" limit="999">
+                    <li><txp:permlink><code><txp:custom_field name="author-prefix" /></code> (<txp:title />)</txp:permlink></li>
+                </txp:article>
+            <txp:else />
+                <article itemscope itemtype="https://schema.org/Person">
+                    <meta itemprop="mainEntityOfPage url" content="<txp:permlink />">
+                    <h1>Author: <span itemprop="name"><txp:title /></span></h1>
+                    <p>Theme prefix: <code itemprop="alternateName"><txp:custom_field name="author-prefix" /></code></p>
+                    <p>Author’s external links:
+                        <txp:if_custom_field name="author-homepage-url"><br><span class="ui-icon ui-icon-home" title="Author homepage">Author homepage:</span> <a rel="external" href="<txp:custom_field name="author-homepage-url" />" title="Go to author homepage"><txp:custom_field name="author-homepage-url" /> <span class="ui-icon ui-icon-extlink"></span></a></txp:if_custom_field>
+                        <txp:if_custom_field name="author-bitbucket-url"><br><span class="ui-icon ui-extra-icon-bitbucket" title="GitHub profile">Bitbucket profile:</span> <a rel="external" href="<txp:custom_field name="author-bitbucket-url" />" title="Go to Bitbucket profile"><txp:custom_field name="author-bitbucket-url" /> <span class="ui-icon ui-icon-extlink"></span></a></txp:if_custom_field>
+                        <txp:if_custom_field name="author-github-url"><br><span class="ui-icon ui-extra-icon-github" title="GitHub profile">GitHub profile:</span> <a rel="external" href="<txp:custom_field name="author-github-url" />" title="Go to GitHub profile"><txp:custom_field name="author-github-url" /> <span class="ui-icon ui-icon-extlink"></span></a></txp:if_custom_field>
+                        <txp:if_custom_field name="author-gitlab-url"><br><span class="ui-icon ui-extra-icon-gitlab" title="GitHub profile">GitLab profile:</span> <a rel="external" href="<txp:custom_field name="author-gitlab-url" />" title="Go to GitLab profile"><txp:custom_field name="author-gitlab-url" /> <span class="ui-icon ui-icon-extlink"></span></a></txp:if_custom_field>
+                    </p>
+                    <p class="alert-block information footnote report-issues">If you notice any of the above links are broken or outdated, <a rel="external" target="_blank" href="https://github.com/textpattern/textpattern-plugins-website/issues/new?template=report-a-content-issue.md">open an issue</a> and we’ll investigate.</p>
+                    <txp:body />
+                    <section>
+                        <h2>Themes by <txp:title /></h2>
+                        <txp:article_custom form="article_listing" section="themes" author-prefix='<txp:custom_field name="author-prefix" />' sort="Category2 desc, Title asc" limit="999" wraptag="div" class="layout-container" />
+                    </section>
+                </article>
+            </txp:if_article_list>
+        </div>
+    </main>
+    <txp:output_form form="body_footer" />
+</body>
+</html>
