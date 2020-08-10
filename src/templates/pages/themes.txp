@@ -1,0 +1,201 @@
+<txp:evaluate query='"<txp:page_url type="3" />" = "json"'>
+...TO DO... JSON output
+<txp:else />
+<!DOCTYPE html>
+<html lang="en-GB-oxendict">
+<head>
+    <txp:output_form form="head" />
+    <txp:if_article_list>
+        <txp:article pgonly limit="12" />
+        <title>Themes list / Textpattern CMS plugins</title>
+        <meta name="description" content="Alphabetical list of themes available for Textpattern CMS, with direct download links and further usage information.">
+        <txp:variable name="page" value='<txp:page_url type="pg" />' />
+        <txp:if_variable name="page" value="1">
+            <meta name="robots" content="index, follow">
+            <link rel="canonical" href="<txp:site_url />themes/">
+            <meta name="twitter:card" content="summary">
+            <meta name="twitter:site" content="@textpattern">
+            <meta name="twitter:title" content="Themes list">
+            <meta name="twitter:description" content="Alphabetical list of themes available for Textpattern CMS, with direct download links and further usage information.">
+            <meta name="twitter:image:src" content="https://textpattern.com/apple-touch-icon-180x180.png">
+            <meta name="twitter:url" content="<txp:site_url />themes/">
+            <meta property="og:site_name" content="Textpattern CMS">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="Themes list">
+            <meta property="og:description" content="Alphabetical list of themes available for Textpattern CMS, with direct download links and further usage information.">
+            <meta property="og:image" content="https://textpattern.com/assets/img/branding/textpattern/textpattern-og.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="1200">
+            <meta property="og:image:alt" content="Textpattern logo">
+            <meta property="og:url" content="<txp:site_url />themes/">
+            <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "CollectionPage",
+                    "headline": "Themes list",
+                    "description": "Alphabetical list of themes available for Textpattern CMS, with direct download links and further usage information.",
+                    "url": "<txp:site_url escape="json" />themes/"
+                }
+            </script>
+        <txp:else />
+            <meta name="robots" content="noindex, follow">
+        </txp:if_variable>
+        <txp:evaluate test>
+            <link rel="prev" href="<txp:newer />">
+        </txp:evaluate>
+        <txp:evaluate test>
+            <link rel="next" href="<txp:older />">
+        </txp:evaluate>
+    <txp:else />
+        <title>Theme: <txp:title /> / Textpattern CMS themes</title>
+        <txp:meta_description />
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="<txp:permlink />">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@textpattern">
+        <meta name="twitter:title" content="Theme: <txp:title />">
+        <meta name="twitter:description" content="<txp:meta_description format="" />">
+        <meta name="twitter:url" content="<txp:permlink />">
+        <meta property="og:site_name" content="Textpattern CMS themes">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Theme: <txp:title />">
+        <meta property="og:description" content="<txp:meta_description format="" />">
+        <meta property="og:url" content="<txp:permlink />">
+        <txp:if_article_image>
+            <txp:images limit="1">
+                <meta name="twitter:image:src" content="<txp:image_url />">
+                <meta property="og:image" content="<txp:image_url />">
+                <meta property="og:image:width" content="<txp:image_info type="w" />">
+                <meta property="og:image:height" content="<txp:image_info type="h" />">
+                <meta property="og:image:alt" content="<txp:image_info type="alt" />">
+            </txp:images>
+        <txp:else />
+            <meta name="twitter:image:src" content="https://textpattern.com/apple-touch-icon-180x180.png">
+            <meta property="og:image" content="https://textpattern.com/assets/img/branding/textpattern/textpattern-og.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="1200">
+            <meta property="og:image:alt" content="Textpattern logo">
+        </txp:if_article_image>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "ItemPage",
+                "headline": "Theme: <txp:title escape="json" />",
+                "description": "<txp:meta_description format="" escape="json" />",
+                "url": "<txp:permlink escape="json" />",
+                "potentialAction": {
+                    "@type": "DownloadAction",
+                    "object": {
+                        "@type": "SoftwareApplication",
+                        "name": "<txp:title escape="json" />",
+                        "applicationCategory": "Theme",
+                        "softwareRequirements": "Textpattern CMS",
+                        "operatingSystem" : [
+                            "Unix",
+                            "Windows"
+                        ],
+                        "Offers": {
+                            "@type": "Offer",
+                            "priceCurrency": "USD",
+                            "price": "0"
+                        },
+                        "softwareVersion": "TODO",
+                        "datePublished": "TODO",
+                        "downloadUrl": "TODO"
+                    }
+                }
+            }
+        </script>
+    </txp:if_article_list>
+</head>
+<txp:if_article_list>
+    <body itemscope itemtype="https://schema.org/CollectionPage">
+<txp:else />
+    <body itemscope itemtype="https://schema.org/ItemPage">
+</txp:if_article_list>
+    <txp:output_form form="body_header" />
+    <main aria-label="Main content">
+        <div class="container">
+            <txp:output_form form="body_crumbs" />
+            <txp:if_article_list>
+                <h1 itemprop="name">Themes list</h1>
+                <txp:article form="article_listing" sort="Category2 desc, Title asc" limit="12" wraptag="div" class="layout-container" />
+                <txp:output_form form="pagination" />
+            <txp:else />
+                <div class="layout-container">
+                    <article class="layout-4col-3span" itemscope itemtype="https://schema.org/Article">
+                        <meta itemprop="mainEntityOfPage" content="<txp:permlink />">
+                        <h1 itemprop="headline">Theme: <txp:title /></h1>
+                        <p>
+                            By
+                            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <txp:article_custom section="authors" author-prefix='<txp:custom_field name="author" />' limit="1">
+                                    <a class="article-author" rel="author" href="<txp:permlink />" itemprop="url"><span itemprop="name"><txp:title /></span></a>
+                                </txp:article_custom>
+                            </span>
+                        </p>
+                        <div class="card-postinfo">
+                            <meta itemprop="datePublished" content="<txp:posted format="iso8601" />">
+                            <meta itemprop="dateModified" content="<txp:modified format="iso8601" />">
+                            <span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                                <meta itemprop="url contentUrl" content="https://textpattern.com/assets/img/branding/textpattern/textpattern-og.png">
+                                <meta itemprop="width" content="1200">
+                                <meta itemprop="height" content="1200">
+                            </span>
+                            <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                <meta itemprop="name" content="Textpattern CMS">
+                                <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                                    <meta itemprop="url" content="https://textpattern.com/assets/img/branding/textpattern/textpattern.png">
+                                    <meta itemprop="width" content="320">
+                                    <meta itemprop="height" content="60">
+                                </span>
+                            </span>
+                            <span class="separator--passive">Theme categorization:</span>
+                            <span itemprop="keywords">
+                                <txp:category1 title link />
+                            </span>
+                            <br>
+                            <span class="separator--passive">Textpattern version compatibility:</span>
+                            <span class="inline-block">...TO DO...</span>
+                        </div>
+                        <txp:if_excerpt>
+                            <div class="article-description" itemprop="description">
+                                <h3>Description</h3>
+                                <txp:excerpt />
+                            </div>
+                        </txp:if_excerpt>
+                        <txp:if_variable name="require-plugin">
+                            <p class="alert-block warning"><strong>Note:</strong> This theme requires the folllwing plugins to also be installed: <a href="https://plugins.textpattern.com/plugins/<txp:variable name="json-require-plugin" />"><txp:variable name="json-require-plugin" /></a>, version <txp:variable name="json-require-match" /> <txp:variable name="json-require-version" />.</p>
+                        </txp:if_variable>
+                        <txp:article><txp:body /></txp:article>
+                        <h3 id="releases">Download releases</h3>
+
+                        ...TO DO...
+
+                        <p class="alert-block information footnote report-issues">If you notice any kind of problem with this page’s construction or content (plugin doesn’t work as stated, outdated information, typos, broken links, or whatever), <a rel="external" target="_blank" href="https://github.com/textpattern/textpattern-curated-plugins-list/issues/new/choose">open an issue</a> and we’ll investigate.</p>
+                    </article>
+                    <section class="layout-4col sidebar">
+                        <txp:evaluate test>
+                            <h3>Further information</h3>
+                            <ul class="list--no-bullets">
+                                <txp:if_variable name="json-repo-homepage">
+                                    <li><a rel="external" href="<txp:variable name="json-repo-homepage" />">Author’s plugin homepage <span class="ui-icon ui-icon-extlink"></span></a></li>
+                                </txp:if_variable>
+                                <txp:if_custom_field name="plugin-forum-url">
+                                    <li><a rel="external" href="<txp:custom_field name="plugin-forum-url" />">Textpattern forum topic <span class="ui-icon ui-icon-extlink"></span></a></li>
+                                </txp:if_custom_field>
+                            </ul>
+                        </txp:evaluate>
+                        <txp:if_custom_field name="json-repo-github">
+                            <txp:output_form form="repo_link_github" />
+                        </txp:if_custom_field>
+                        <p><img class="dark-contrast" width="200" height="200" alt="The Themes Carver" src="/assets/img/themes-carver.png" srcset="/assets/img/themes-carver@2x.png 2x"></p>
+                    </section>
+                </div>
+            </txp:if_article_list>
+        </div>
+    </main>
+    <txp:output_form form="body_footer" />
+</body>
+</html>
+</txp:evaluate>
