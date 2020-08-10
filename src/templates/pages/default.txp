@@ -63,6 +63,30 @@
 
             </div><!-- /.container -->
         </div><!-- /.wrapper-inner -->
+
+        <div class="wrapper-inner">
+            <div class="container index-plugins">
+                <div class="layout-container">
+                    <div class="layout-3col">
+                        <h3 class="index-themes-create">Create a new theme</h3>
+                        <p>Want to create your own Textpattern theme? Our documentation website has extensive information available for those who are thinking about developing Textpattern themes.</p>
+                        <p><a href="https://docs.textpattern.com/build/themes-creating-using-and-sharing">Read our theme development documentation</a>.</p>
+                    </div>
+                    <div class="layout-3col">
+                        <h3 class="index-themes-add">Add a missing theme</h3>
+                        <p>Found a Textpattern theme that is not listed on this website? Please make us aware of it and we will endeavour to investigate!</p>
+                        <p><strong>Note:</strong> All themes for inclusion in the Textpattern themes website must have source code available - please don’t suggest themes that do not fulfil this criteria!</p>
+                        <p><a rel="external" href="#">Nominate a theme for addition</a>.</p>
+                    </div>
+                    <div class="layout-3col">
+                        <h3 class="index-themes-report">Report a broken theme</h3>
+                        <p>Please let us know about any broken Textpattern theme listings on this website.</p>
+                        <p><strong>Note:</strong> This is intended for use when reporting broken theme links or unreachable content on the Textpattern themes website itself <em>not</EM> theme code. In the event of broken theme code please contact the original author directly.</p>
+                        <p><a rel="external" href="#">Generate an issue report</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 <txp:else />
 <txp:if_search>
