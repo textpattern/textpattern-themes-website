@@ -61,9 +61,13 @@
 
                 ... TO DO ...
 
-            </div><!-- /.container -->
-        </div><!-- /.wrapper-inner -->
-
+            </div>
+        </div>
+        <div class="wrapper-inner zebra">
+            <div class="container">
+                <p><img loading="lazy" class="screen-large prefers-color-scheme" width="1150" height="494" alt="Textpattern Theme Painter with Pictures" src="/assets/img/index-themes-painting-collection.png" data-src-light="/assets/img/index-themes-painting-collection.png" data-src-dark="/assets/img/dark-index-themes-painting-collection.png" srcset="/assets/img/index-themes-painting-collection@2x.png 2x" data-srcset-light="/assets/img/index-themes-painting-collection@2x.png 2x" data-srcset-dark="/assets/img/dark-index-themes-painting-collection@2x.png 2x"><img loading="lazy" class="screen-small prefers-color-scheme" width="620" height="477" alt="Textpattern Theme Painter" src="/assets/img/index-themes-painting.png" data-src-light="/assets/img/index-themes-painting.png" data-src-dark="/assets/img/dark-index-themes-painting.png"></p>
+            </div>
+        </div>
         <div class="wrapper-inner">
             <div class="container index-themes">
                 <div class="layout-container">
