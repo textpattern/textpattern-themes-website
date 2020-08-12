@@ -2,8 +2,8 @@
 <html lang="en-GB-oxendict">
 <head>
     <txp:output_form form="head" />
-    <txp:if_search>
-        <title>Search results / Textpattern CMS themes</title>
+    <txp:if_article_list type="q, compatibility">
+        <title>Search results / Textpattern CMS plugins</title>
         <meta name="description" content="Search results.">
         <meta name="robots" content="none">
     <txp:else />
@@ -61,6 +61,17 @@
 
                 ... TO DO ...
 
+                <section>
+                    <h2>Themes by category</h2>
+                    <div class="layout-text4col">
+                        <txp:etc_cache id="theme-category-list">
+                            <txp:category_list class="list--no-bullets" wraptag="ol" break="" parent="theme-type" exclude="theme-type">
+                                <li><txp:category title link /> (<span title="Number of themes in this category"><txp:article_custom category='<txp:category />' pgonly pageby="1" /></span>)</li>
+                            </txp:category_list>
+                        </txp:etc_cache>
+                    </div>
+                    <p><strong>Or <a href="<txp:site_url />themes/">browse all available themes (<txp:article_custom pgonly pageby="1" section="plugins" /> in total), listed alphabetically</a>…</strong></p>
+                </section>
             </div>
         </div>
         <div class="wrapper-inner zebra">
@@ -92,45 +103,40 @@
             </div>
         </div>
     </main>
-<txp:else />
-<txp:if_search>
-    <txp:article pgonly limit="12" />
+<txp:if_article_list type="q, compatibility">
+    <txp:variable name="compatibility" value='<txp:page_url type="compatibility" />' />
+    <txp:variable name="articles" trim>
+        <txp:if_variable name="compatibility" value="^\d" match="pattern">
+            <txp:article min-txp-version-verified='%%<txp:page_url type="compatibility" />' max-txp-version-verified='<txp:page_url type="compatibility" />%%' form="article_listing" searchform="article_listing" limit="12" wraptag="div" class="layout-container" />
+        <txp:else />
+            <txp:article form="article_listing" searchform="article_listing" limit="12" wraptag="div" class="layout-container" />
+        </txp:if_variable>
+    </txp:variable>
+    <txp:variable name="pages" value='<txp:pages total />' />
     <body itemscope itemtype="https://schema.org/SearchResultsPage">
     <txp:output_form form="body_header" />
     <main aria-label="Main content">
-        <div class="wrapper-inner zebra">
-            <div class="container" itemscope itemtype="https://schema.org/WebSite">
-                <meta itemprop="url" content="<txp:site_url />">
-                <form class="search-hero" role="search" method="get" action="<txp:site_url />" itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
-                    <meta itemprop="target" content="<txp:site_url />?q={q}">
-                    <label class="accessibility" for="q">Search</label>
-                    <input id="q" name="q" type="search" size="28" itemprop="query-input" value="<txp:search_term />">
-                    <input class="button-primary" type="submit" value="Search">
-                </form>
-            </div>
-        </div>
+        <txp:search_input />
         <div class="wrapper-inner">
             <div class="container">
                 <h1 itemprop="name">Search results</h1>
-                <txp:if_search_results max="96">
+                <txp:if_variable name="pages" value="^[1-8]$" match="pattern">
                     <div class="article-description" itemprop="description">
-                        <p><txp:search_result_count text="article(s) found" /> matching your search request <q><txp:search_term /></q>.</p>
+                        <p><txp:search_result_count text="theme(s) found" /><txp:if_variable name="compatibility" not value="Any"> compatible with Textpattern <txp:variable name="compatibility" /></txp:if_variable><txp:search_term wraptag=" matching your search request <q><+></q>" />.</p>
                     </div>
-                    <div class="teaser-container">
-                        <txp:article searchform="article_listing" limit="12" wraptag="div" class="layout-container" />
-                    </div>
-                    <txp:output_form form="pagination" />
+                    <txp:variable name="articles" />
+                    <txp:page_url context="s,q,compatibility"><txp:output_form form="pagination" /></txp:page_url>
                 <txp:else />
                     <div class="article-description" itemprop="description">
-                        <txp:if_search_results>
+                        <txp:if_variable name="pages" value>
                             <p>It seems like you are looking for a very common search term, maybe try a more specific phrase than <q><txp:search_term /></q>.</p>
                         <txp:else />
                             <p>Sorry, no results were found matching your search request <q><txp:search_term /></q>.</p>
-                        </txp:if_search_results>
+                        </txp:if_variable>
                     </div>
                     <p>Please try another search term or <a href="<txp:site_url />">return to the Textpattern themes homepage</a>.</p>
                     <p><img loading="lazy" class="dark-contrast" width="556" height="406" alt="Page error" src="https://textpattern.com/assets/img/com/error.png" srcset="https://textpattern.com/assets/img/com/error@2x.png 2x"></p>
-                </txp:if_search_results>
+                </txp:if_variable>
             </div>
         </div>
     </main>
