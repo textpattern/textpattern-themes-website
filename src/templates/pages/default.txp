@@ -103,6 +103,7 @@
             </div>
         </div>
     </main>
+<txp:else />
 <txp:if_article_list type="q, compatibility">
     <txp:variable name="compatibility" value='<txp:page_url type="compatibility" />' />
     <txp:variable name="articles" trim>
