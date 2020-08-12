@@ -43,7 +43,7 @@
             </script>
             <txp:variable name="homepage" value="1" />
         </txp:if_category>
-    </txp:if_search>
+    </txp:if_article_list>
 </head>
 <txp:if_variable name="homepage">
 <body itemscope itemtype="https://schema.org/WebPage">
@@ -155,7 +155,7 @@
             <txp:output_form form="pagination" />
         </div>
     </main>
-</txp:if_search>
+</txp:if_article_list>
 </txp:if_variable>
     <txp:output_form form="body_footer" />
 </body>
