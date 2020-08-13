@@ -1,4 +1,4 @@
-<article class="layout-3col card" itemscope itemtype="https://schema.org/Article">
+<article class="layout-2col card" itemscope itemtype="https://schema.org/Article">
     <txp:if_article_category number="2"><small class="alert-block alert-pill error"><txp:category2 title /></small></txp:if_article_category>
     <div class="card-body">
         <h3 itemprop="headline"><a itemprop="url mainEntityOfPage" href="<txp:permlink />" title="Full details"><txp:title /></a></h3>
