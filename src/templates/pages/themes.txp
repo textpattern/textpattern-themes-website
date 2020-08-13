@@ -155,7 +155,7 @@
                                 <txp:category1 title link />
                             </span>
                             <br>
-                            <span class="separator--passive">Textpattern version compatibility:</span>
+                            <span class="separator--passive">Textpattern minimum version compatibility:</span>
                             <span class="inline-block">...TO DO...</span>
                         </div>
                         <txp:if_excerpt>

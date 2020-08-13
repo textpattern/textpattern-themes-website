@@ -37,7 +37,7 @@
             <span class="separator--passive">Textpattern compatibility:</span>
             <span class="inline-block">
                 <txp:if_custom_field name="min-txp-version">
-                    <span class="compatibility"><txp:custom_field name="min-txp-version" /></span>
+                    <span class="compatibility"><txp:custom_field name="min-txp-version" />+</span>
                 <txp:else />
                     <span class="compatibility">Unknown</span>
                 </txp:if_custom_field>
