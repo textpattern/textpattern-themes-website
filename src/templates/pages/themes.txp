@@ -12,13 +12,13 @@
         <txp:variable name="page" value='<txp:page_url type="pg" />' />
         <txp:if_variable name="page" value="1">
             <meta name="robots" content="index, follow">
-            <link rel="canonical" href="<txp:site_url /><txp:section />/">
+            <link rel="canonical" href="<txp:section url />">
             <meta name="twitter:card" content="summary">
             <meta name="twitter:site" content="@textpattern">
             <meta name="twitter:title" content="<txp:section title />">
             <meta name="twitter:description" content="Alphabetical list of themes available for Textpattern CMS, with direct download links and further usage information.">
             <meta name="twitter:image:src" content="https://textpattern.com/apple-touch-icon-180x180.png">
-            <meta name="twitter:url" content="<txp:site_url /><txp:section />/">
+            <meta name="twitter:url" content="<txp:section url />">
             <meta property="og:site_name" content="Textpattern CMS">
             <meta property="og:type" content="website">
             <meta property="og:title" content="<txp:section title />">
@@ -27,14 +27,14 @@
             <meta property="og:image:width" content="1200">
             <meta property="og:image:height" content="1200">
             <meta property="og:image:alt" content="Textpattern logo">
-            <meta property="og:url" content="<txp:site_url /><txp:section />/">
+            <meta property="og:url" content="<txp:section url />">
             <script type="application/ld+json">
                 {
                     "@context": "https://schema.org",
                     "@type": "CollectionPage",
                     "headline": "<txp:section title />",
                     "description": "Alphabetical list of themes available for Textpattern CMS, with direct download links and further usage information.",
-                    "url": "<txp:site_url /><txp:section />/"
+                    "url": "<txp:section url escape="json" />"
                 }
             </script>
         <txp:else />
