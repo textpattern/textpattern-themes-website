@@ -7,7 +7,7 @@
     <txp:output_form form="head" />
     <txp:if_article_list>
         <txp:article pgonly limit="12" />
-        <title>Themes list / Textpattern CMS plugins</title>
+        <title><txp:section title /> / Textpattern CMS themes</title>
         <meta name="description" content="Alphabetical list of themes available for Textpattern CMS, with direct download links and further usage information.">
         <txp:variable name="page" value='<txp:page_url type="pg" />' />
         <txp:if_variable name="page" value="1">
@@ -15,13 +15,13 @@
             <link rel="canonical" href="<txp:site_url />themes/">
             <meta name="twitter:card" content="summary">
             <meta name="twitter:site" content="@textpattern">
-            <meta name="twitter:title" content="Themes list">
+            <meta name="twitter:title" content="<txp:section title />">
             <meta name="twitter:description" content="Alphabetical list of themes available for Textpattern CMS, with direct download links and further usage information.">
             <meta name="twitter:image:src" content="https://textpattern.com/apple-touch-icon-180x180.png">
             <meta name="twitter:url" content="<txp:site_url />themes/">
             <meta property="og:site_name" content="Textpattern CMS">
             <meta property="og:type" content="website">
-            <meta property="og:title" content="Themes list">
+            <meta property="og:title" content="<txp:section title />">
             <meta property="og:description" content="Alphabetical list of themes available for Textpattern CMS, with direct download links and further usage information.">
             <meta property="og:image" content="https://textpattern.com/assets/img/branding/textpattern/textpattern-og.png">
             <meta property="og:image:width" content="1200">
@@ -32,7 +32,7 @@
                 {
                     "@context": "https://schema.org",
                     "@type": "CollectionPage",
-                    "headline": "Themes list",
+                    "headline": "<txp:section title />",
                     "description": "Alphabetical list of themes available for Textpattern CMS, with direct download links and further usage information.",
                     "url": "<txp:site_url escape="json" />themes/"
                 }
@@ -118,7 +118,7 @@
         <div class="container">
             <txp:output_form form="body_crumbs" />
             <txp:if_article_list>
-                <h1 itemprop="name">Themes list</h1>
+                <h1 itemprop="name"><txp:section title /></h1>
                 <txp:article form="article_listing" sort="Category2 desc, Title asc" limit="12" wraptag="div" class="layout-container" />
                 <txp:output_form form="pagination" />
             <txp:else />
@@ -172,17 +172,17 @@
 
                         ...TO DO...
 
-                        <p class="alert-block information footnote report-issues">If you notice any kind of problem with this page’s construction or content (plugin doesn’t work as stated, outdated information, typos, broken links, or whatever), <a rel="external" target="_blank" href="https://github.com/textpattern/textpattern-curated-plugins-list/issues/new/choose">open an issue</a> and we’ll investigate.</p>
+                        <p class="alert-block information footnote report-issues">If you notice any kind of problem with this page’s construction or content (theme doesn’t work as stated, outdated information, typos, broken links, or whatever), <a rel="external" target="_blank" href="https://github.com/textpattern/textpattern-curated-plugins-list/issues/new/choose">open an issue</a> and we’ll investigate.</p>
                     </article>
                     <section class="layout-4col sidebar">
                         <txp:evaluate test>
                             <h3>Further information</h3>
                             <ul class="list--no-bullets">
                                 <txp:if_variable name="json-repo-homepage">
-                                    <li><a rel="external" href="<txp:variable name="json-repo-homepage" />">Author’s plugin homepage <span class="ui-icon ui-icon-extlink"></span></a></li>
+                                    <li><a rel="external" href="<txp:variable name="json-repo-homepage" />">Author’s theme homepage <span class="ui-icon ui-icon-extlink"></span></a></li>
                                 </txp:if_variable>
-                                <txp:if_custom_field name="plugin-forum-url">
-                                    <li><a rel="external" href="<txp:custom_field name="plugin-forum-url" />">Textpattern forum topic <span class="ui-icon ui-icon-extlink"></span></a></li>
+                                <txp:if_custom_field name="theme-forum-url">
+                                    <li><a rel="external" href="<txp:custom_field name="theme-forum-url" />">Textpattern forum topic <span class="ui-icon ui-icon-extlink"></span></a></li>
                                 </txp:if_custom_field>
                             </ul>
                         </txp:evaluate>
