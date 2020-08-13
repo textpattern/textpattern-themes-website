@@ -24,7 +24,7 @@
             </span>
             <span class="separator--passive">By:</span>
             <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-                <txp:article_custom section="authors" author-prefix='<txp:custom_field name="author-prefix" />' limit="1">
+                <txp:article_custom section="authors" author-prefix='<txp:custom_field name="author-name" />' limit="1">
                     <a class="article-author" rel="author" href="<txp:permlink />" itemprop="url"><span itemprop="name"><txp:title /></span></a>
                 </txp:article_custom>
             </span>
