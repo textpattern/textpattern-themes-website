@@ -1,19 +1,19 @@
 <article class="layout-2col card" itemscope itemtype="https://schema.org/Article">
     <txp:if_article_category number="2"><small class="alert-block alert-pill error"><txp:category2 title /></small></txp:if_article_category>
+    <txp:if_article_image>
+        <txp:images form="images" break="" limit="1" />
+    <txp:else />
+        <span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url contentUrl" content="https://textpattern.com/assets/img/branding/textpattern/textpattern-og.png">
+            <meta itemprop="width" content="1200">
+            <meta itemprop="height" content="1200">
+        </span>
+    </txp:if_article_image>
     <div class="card-body">
         <h3 itemprop="headline"><a itemprop="url mainEntityOfPage" href="<txp:permlink />" title="Full details"><txp:title /></a></h3>
         <div class="card-postinfo">
             <meta itemprop="datePublished" content="<txp:posted format="iso8601" />">
             <meta itemprop="dateModified" content="<txp:modified format="iso8601" />">
-            <txp:if_article_image>
-                <txp:images form="images" break="" limit="1" />
-            <txp:else />
-                <span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                    <meta itemprop="url contentUrl" content="https://textpattern.com/assets/img/branding/textpattern/textpattern-og.png">
-                    <meta itemprop="width" content="1200">
-                    <meta itemprop="height" content="1200">
-                </span>
-            </txp:if_article_image>
             <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
                 <meta itemprop="name" content="Textpattern CMS">
                 <span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
