@@ -155,8 +155,14 @@
                                 <txp:category1 title link />
                             </span>
                             <br>
-                            <span class="separator--passive">Textpattern minimum version compatibility:</span>
-                            <span class="inline-block">...TO DO...</span>
+                            <span class="separator--passive">Textpattern version compatibility:</span>
+                            <span class="inline-block">
+                                <txp:if_custom_field name="min-txp-version">
+                                    <span class="compatibility"><txp:custom_field name="min-txp-version" />+</span>
+                                <txp:else />
+                                    <span class="compatibility">Unknown</span>
+                                </txp:if_custom_field>
+                            </span>
                         </div>
                         <txp:if_excerpt>
                             <div class="article-description" itemprop="description">
@@ -164,8 +170,17 @@
                                 <txp:excerpt />
                             </div>
                         </txp:if_excerpt>
+                        <txp:if_article_image>
+                            <txp:images form="images" break="" />
+                        <txp:else />
+                            <span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                                <meta itemprop="url contentUrl" content="https://textpattern.com/assets/img/branding/textpattern/textpattern-og.png">
+                                <meta itemprop="width" content="1200">
+                                <meta itemprop="height" content="1200">
+                            </span>
+                        </txp:if_article_image>
                         <txp:if_variable name="require-plugin">
-                            <p class="alert-block warning"><strong>Note:</strong> This theme requires the folllwing plugins to also be installed: <a href="https://plugins.textpattern.com/plugins/<txp:variable name="json-require-plugin" />"><txp:variable name="json-require-plugin" /></a>, version <txp:variable name="json-require-match" /> <txp:variable name="json-require-version" />.</p>
+                            <p class="alert-block warning"><strong>Note:</strong> This theme requires the following plugins to also be installed: <a href="https://plugins.textpattern.com/plugins/<txp:variable name="json-require-plugin" />"><txp:variable name="json-require-plugin" /></a>, version <txp:variable name="json-require-match" /> <txp:variable name="json-require-version" />.</p>
                         </txp:if_variable>
                         <txp:article><txp:body /></txp:article>
                         <h3 id="releases">Download releases</h3>
