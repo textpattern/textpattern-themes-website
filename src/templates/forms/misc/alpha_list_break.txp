@@ -1,0 +1,1 @@
+<txp:evaluate query='substring(<txp:custom_field name="author-name" escape="quote" />, 1, 1)' escape="upper" />
