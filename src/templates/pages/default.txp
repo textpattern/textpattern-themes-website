@@ -93,13 +93,13 @@
                         <h3 class="index-themes-add">Add a missing theme</h3>
                         <p>Found a Textpattern theme that is not listed on this website? Please make us aware of it and we will endeavour to investigate!</p>
                         <p><strong>Note:</strong> All themes for inclusion in the Textpattern themes website must have source code available - please don’t suggest themes that do not fulfil this criteria!</p>
-                        <p><a rel="external" href="#">Nominate a theme for addition</a>.</p>
+                        <p><a rel="external" href="https://github.com/textpattern/textpattern-curated-themes-list/issues/new?labels=theme-add&amp;template=add-a-missing-textpattern-theme.md&amp;title=%5BADD%5D+xxxxx">Nominate a theme for addition</a>.</p>
                     </div>
                     <div class="layout-3col">
                         <h3 class="index-themes-report">Report a broken theme</h3>
                         <p>Please let us know about any broken Textpattern theme listings on this website.</p>
                         <p><strong>Note:</strong> This is intended for use when reporting broken theme links or unreachable content on the Textpattern themes website itself <em>not</EM> theme code. In the event of broken theme code please contact the original author directly.</p>
-                        <p><a rel="external" href="#">Generate an issue report</a>.</p>
+                        <p><a rel="external" href="https://github.com/textpattern/textpattern-curated-themes-list/issues/new?labels=theme-broken&amp;template=report-a-broken-textpattern-theme-listing.md&amp;title=%5BBROKEN%5D+xxxxx">Generate an issue report</a>.</p>
                     </div>
                 </div>
             </div>
