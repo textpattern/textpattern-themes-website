@@ -3,7 +3,7 @@
 <head>
     <txp:output_form form="head" />
     <txp:if_article_list type="q, compatibility">
-        <title>Search results / Textpattern CMS plugins</title>
+        <title>Search results / Textpattern CMS themes</title>
         <meta name="description" content="Search results.">
         <meta name="robots" content="none">
     <txp:else />
