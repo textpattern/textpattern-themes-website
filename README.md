@@ -5,7 +5,7 @@
 
 **CURRENTLY UNDER DEVELOPMENT**
 
-Official 2020+ themes website of the [Textpattern](https://textpattern.com/) project. **Requires Textpattern 4.8.1 or later.**
+Official 2020+ themes website of the [Textpattern](https://textpattern.com/) project. **Requires Textpattern 4.8.2 or later.**
 
 ## Supported web browsers
 
