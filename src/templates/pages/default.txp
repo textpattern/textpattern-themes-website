@@ -72,7 +72,7 @@
                             </txp:category_list>
                         </txp:etc_cache>
                     </div>
-                    <p><strong>Or <a href="<txp:site_url />themes/">browse all available themes (<txp:article_custom pgonly pageby="1" section="themes" /> in total), listed alphabetically</a>…</strong></p>
+                    <p><strong>Or <a href="<txp:site_url />themes/">browse all available themes (<txp:article_custom pgonly pageby="1" section="themes,themes-admin" /> in total), listed alphabetically</a>…</strong></p>
                 </section>
             </div>
         </div>
