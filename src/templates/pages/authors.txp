@@ -97,7 +97,7 @@
                 <h1 itemprop="name">Authors list</h1>
                 <p><strong>Browse all theme authors (<txp:article_custom pgonly pageby="1" section="authors" /> in total), listed alphabetically</a>…</strong></p>
                 <txp:article sort="custom_2" breakby="alpha_list_break" breakform="alpha_list_form" limit="999">
-                    <li><txp:permlink><code><txp:custom_field name="author-prefix" /></code> (<txp:title />)</txp:permlink></li>
+                    <li><txp:permlink><code><txp:custom_field name="author-name" /></code> (<txp:title />)</txp:permlink></li>
                 </txp:article>
             <txp:else />
                 <article itemscope itemtype="https://schema.org/Person">
@@ -113,7 +113,7 @@
                     <txp:body />
                     <section>
                         <h2>Themes by <txp:title /></h2>
-                        <txp:article_custom form="article_listing" section="themes" author-prefix='<txp:custom_field name="author-prefix" />' sort="Category2 desc, Title asc" limit="999" wraptag="div" class="layout-container" />
+                        <txp:article_custom form="article_listing" section="themes" author-name='<txp:custom_field name="author-name" />' sort="Category2 desc, Title asc" limit="999" wraptag="div" class="layout-container" />
                     </section>
                 </article>
             </txp:if_article_list>

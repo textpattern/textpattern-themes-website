@@ -52,6 +52,7 @@
             <link rel="next" href="<txp:older />">
         </txp:evaluate>
     <txp:else />
+        <txp:output_form form="json_card_reader" />
         <title>Theme: <txp:title /> / Textpattern CMS themes</title>
         <txp:meta_description />
         <meta name="robots" content="index, follow">
@@ -134,7 +135,7 @@
                         <p>
                             By
                             <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-                                <txp:article_custom section="authors" author-prefix='<txp:custom_field name="author-name" />' limit="1">
+                                <txp:article_custom section="authors" author-name='<txp:custom_field name="author-name" />' limit="1">
                                     <a class="article-author" rel="author" href="<txp:permlink />" itemprop="url"><span itemprop="name"><txp:title /></span></a>
                                 </txp:article_custom>
                             </span>
