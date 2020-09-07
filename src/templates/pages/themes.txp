@@ -194,9 +194,13 @@
                             <p class="alert-block error">Theme resources not currently available. If this problem persists, <a href="https://github.com/textpattern/textpattern-curated-themes-list/issues/new?labels=theme-broken&amp;template=report-a-broken-textpattern-theme-listing.md&amp;title=%5BBROKEN%5D+<txp:article_url_title escape="json" />">open an issue</a> and we’ll investigate.</p>
                         <txp:else />
                             <h3 id="download">Download</h3>
-
-                            ...TO DO...
-
+                            <dl>
+                                <dt><txp:variable name="json-name" /> <txp:variable name="json-version" /></dt>
+                                <txp:if_variable name="json-date">
+                                    <dd>Release date: <time><txp:variable name="json-date" /></time></dd>
+                                </txp:if_variable>
+                                <dd><a class="button button-primary" href="<txp:variable name="json-url" />">Download this theme</a></dd>
+                            </dl>
                             <h3 id="installation">Installation instructions</h3>
 
                             ...TO DO...
