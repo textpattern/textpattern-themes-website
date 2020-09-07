@@ -17,7 +17,7 @@ module.exports = function (grunt)
             dest: {
                 img: 'public/assets/img/',
                 mockups: 'public/mockups/',
-                templates: 'public/themes/textpattern-themes/'
+                templates: 'public/themes-internal/textpattern-themes/'
             }
         },
 
