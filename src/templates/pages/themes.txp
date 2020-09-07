@@ -207,9 +207,9 @@
                                 </txp:if_custom_field>
                             </ul>
                         </txp:evaluate>
-                        <txp:if_custom_field name="json-repo-github">
+                        <txp:if_variable name="json-repo-github">
                             <txp:output_form form="repo_link_github" />
-                        </txp:if_custom_field>
+                        </txp:if_variable>
                         <p><img class="dark-contrast" width="200" height="200" alt="The Themes Carver" src="/assets/img/themes-carver.png" srcset="/assets/img/themes-carver@2x.png 2x"></p>
                     </section>
                 </div>
