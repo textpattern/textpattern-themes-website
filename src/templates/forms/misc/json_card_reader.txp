@@ -22,7 +22,7 @@
 global $gotFile;
 global $json;
 
-$file = 'library-of-themes/'.parse('<txp:title escape="json" />').'.json';
+$file = 'library-of-themes/'.parse('<txp:article_url_title escape="json" />').'.json';
 
 if (is_readable($file)) {
     $gotFile = file_get_contents($file);
