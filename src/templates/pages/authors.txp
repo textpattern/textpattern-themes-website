@@ -96,9 +96,10 @@
             <txp:if_article_list>
                 <h1 itemprop="name">Authors list</h1>
                 <p><strong>Browse all theme authors (<txp:article_custom pgonly pageby="1" section="authors" /> in total), listed alphabetically</a>…</strong></p>
-                <txp:article sort="custom_2" breakby="alpha_list_break" breakform="alpha_list_form" limit="999">
-                    <li><txp:permlink><code><txp:custom_field name="author-name" /></code> (<txp:title />)</txp:permlink></li>
+                <txp:article sort="Title" breakby="alpha_list_break" breakform="alpha_list_form" limit="999">
+                    <li><txp:permlink><txp:title /></txp:permlink></li>
                 </txp:article>
+                <p class="alert-block information footnote report-issues">If you notice any of the above links are broken or outdated, <a rel="external" target="_blank" href="https://github.com/textpattern/textpattern-themes-website/issues/new?template=report-a-content-issue.md">open an issue</a> and we’ll investigate.</p>
             <txp:else />
                 <article itemscope itemtype="https://schema.org/Person">
                     <meta itemprop="mainEntityOfPage url" content="<txp:permlink />">
