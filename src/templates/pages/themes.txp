@@ -3,7 +3,10 @@
 <txp:variable name="body"><txp:article><txp:body /></txp:article></txp:variable>
 <txp:header value="application/json; charset=utf-8" />{
   "name": "<txp:article_url_title escape="json" />",
-  TODO
+  "version": "<txp:variable name="json-version" escape="json" />",
+  <txp:if_variable name="json-date">"datePublished": "<txp:variable name="json-date" escape="json" />",</txp:if_variable>
+  <txp:if_custom_field name="min-txp-version">"minTxpCompatibility": "<txp:custom_field name="min-txp-version" escape="json" />",</txp:if_custom_field>
+  "downloadUrl": "<txp:variable name="json-url" escape="json" />"
 }
 <txp:else />
 <!DOCTYPE html>
