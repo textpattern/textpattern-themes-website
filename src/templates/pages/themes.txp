@@ -177,7 +177,13 @@
                             </div>
                         </txp:if_excerpt>
                         <txp:if_article_image>
-                            <txp:images form="images" break="" />
+                            <txp:images form="images" break="" limit="1" />
+                            <txp:evaluate test>
+                                <details>
+                                    <summary>Show more screenshots of this theme…</summary>
+                                    <txp:images form="images" break="" limit="9" offset="1" />
+                                </details>
+                            </txp:evaluate>
                         <txp:else />
                             <span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
                                 <meta itemprop="url contentUrl" content="https://textpattern.com/assets/img/branding/textpattern/textpattern-og.png">
@@ -189,18 +195,22 @@
                             <p class="alert-block warning"><strong>Note:</strong> This theme requires the following plugins to also be installed: <a href="https://plugins.textpattern.com/plugins/<txp:variable name="json-require-plugin" />"><txp:variable name="json-require-plugin" /></a>, version <txp:variable name="json-require-match" /> <txp:variable name="json-require-version" />.</p>
                         </txp:if_variable>
                         <txp:article><txp:body /></txp:article>
-
                         <txp:if_variable not name="json-name">
                             <p class="alert-block error">Theme resources not currently available. If this problem persists, <a href="https://github.com/textpattern/textpattern-curated-themes-list/issues/new?labels=theme-broken&amp;template=report-a-broken-textpattern-theme-listing.md&amp;title=%5BBROKEN%5D+<txp:article_url_title escape="json" />">open an issue</a> and we’ll investigate.</p>
                         <txp:else />
-                            <h3 id="download">Download</h3>
-                            <dl>
-                                <dt><txp:variable name="json-name" /> <txp:variable name="json-version" /></dt>
+                            <txp:if_variable name="json-demo">
+                                <h3 id="demo">Live demo</h3>
+                                <p><a target="_blank" rel="external noopener" href="<txp:variable name="json-demo" />">View a live demo of this theme (opens a new browser tab/window)</a>.</p>
+                            </txp:if_variable>
+                            <h3 id="download">Download <txp:title /></h3>
+                            <p>
+                                Latest version: <txp:variable name="json-version" />
                                 <txp:if_variable name="json-date">
-                                    <dd>Release date: <time><txp:variable name="json-date" /></time></dd>
+                                    <span role="separator">|</span>
+                                    Release date: <time><txp:variable name="json-date" /></time>
                                 </txp:if_variable>
-                                <dd><a class="button button-primary" href="<txp:variable name="json-url" />">Download this theme</a></dd>
-                            </dl>
+                            </p>
+                            <p><a class="button button-primary" href="<txp:variable name="json-url" />">Download this theme</a></p>
                             <h3 id="installation">Installation instructions</h3>
 
                             ...TO DO...
