@@ -217,14 +217,21 @@
                             <h3 id="installation">Installation instructions</h3>
                             <txp:if_article_category name="admin">
                                 <p>To install a new admin theme, or to upgrade an existing admin theme, please follow the instructions below:</p>
-
-                                <p>...TODO...</p>
-
+                                <ol>
+                                    <li>Download the <code>.zip</code> file using the download button above, and then unzip the contents.</li>
+                                    <li>Upload the entire unzipped folder into the <code>admin-themes</code> directory, located within the <code>textpattern</code> directory of your website.</li>
+                                    <li>Log in to your Textpattern admin panel,
+                                    <li>If you have upgraded an admin theme that was already in use, then the newer theme should already be activated and no further action is needed. However, if you notice any issues with the theme then please refresh your browser cache, to ensure that the latest files are being used.</li>
+                                    <li>If you are installing a new theme, then navigate to the Textpattern ‘Preferences’ panel’s ‘Admin’ section.</li>
+                                    <li>Select the admin theme you want to use, via the ‘Admin-side theme’ preference (if you have upgraded an admin theme that was already in use, then the newer theme should already be activated and no further action is needed).</li>
+                                    <li>‘Save’ your preferences and the admin theme will be activated.</li>
+                                </ol>
+                                <p>More detailed installation and usage instructions are available within <a target="_blank" rel="external noopener" href="https://docs.textpattern.com/build/creating-administration-themes">our admin theme documentation</a>.</p>
                             <txp:else />
                                 <p>To install a new theme, or to upgrade an existing theme, please follow the instructions below:</p>
                                 <ol>
                                     <li>Download the <code>.zip</code> file using the download button above, and then unzip the contents.</li>
-                                    <li>Upload the entire unzipped folder into the ‘themes’ directory of your Textpattern website. <strong>Note</strong> that the default name for the destination directory is <code>themes</code>, located in the site’s root directory, but you can manually rename that in your Textpattern preferences. Please ensure your theme is uploaded to the correct destination!</li>
+                                    <li>Upload the entire unzipped folder into the themes directory of your Textpattern website. <strong>Note</strong> that the default name for the destination directory is <code>themes</code>, located in the site’s root directory, but you can manually rename that in your Textpattern preferences—please ensure your theme is uploaded to the correct destination!</li>
                                     <li>Log in to your Textpattern admin panel, then navigate to the ‘Themes’ panel.</li>
                                     <li>If you are installing a new theme, import the theme via the user interface.</li>
                                     <li>If you are upgrading an existing theme, select the current theme from the themes list, then use the menu located below the list to select ‘Update from disk’ and then ‘Go’. The new theme will upgrade the current theme.</li>
