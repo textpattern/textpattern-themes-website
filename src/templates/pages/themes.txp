@@ -215,9 +215,23 @@
                             </p>
                             <p><a class="button button-primary" href="<txp:variable name="json-url" />">Download this theme</a></p>
                             <h3 id="installation">Installation instructions</h3>
+                            <txp:if_article_category name="admin">
+                                <p>To install a new admin theme, or to upgrade an existing admin theme, please follow the instructions below:</p>
 
-                            ...TO DO...
+                                <p>...TODO...</p>
 
+                            <txp:else />
+                                <p>To install a new theme, or to upgrade an existing theme, please follow the instructions below:</p>
+                                <ol>
+                                    <li>Download the <code>.zip</code> file using the download button above, and then unzip the contents.</li>
+                                    <li>Upload the entire unzipped folder into the ‘themes’ directory of your Textpattern website. <strong>Note</strong> that the default name for the destination directory is <code>themes</code>, located in the site’s root directory, but you can manually rename that in your Textpattern preferences. Please ensure your theme is uploaded to the correct destination!</li>
+                                    <li>Log in to your Textpattern admin panel, then navigate to the ‘Themes’ panel.</li>
+                                    <li>If you are installing a new theme, import the theme via the user interface.</li>
+                                    <li>If you are upgrading an existing theme, select the current theme from the themes list, then use the menu located below the list to select ‘Update from disk’ and then ‘Go’. The new theme will upgrade the current theme.</li>
+                                    <li>Using the ‘Sections’ panel, assign the theme to one or more sections of your website.</li>
+                                </ol>
+                                <p>More detailed installation and usage instructions are available within <a target="_blank" rel="external noopener" href="https://docs.textpattern.com/build/themes-creating-using-and-sharing">our theme documentation</a>, specifically the <a target="_blank" rel="external noopener" href="https://docs.textpattern.com/build/themes-creating-using-and-sharing#importing-themes">‘Importing themes’ section</a>.</p>
+                            </txp:if_article_category>
                         </txp:if_variable>
                         <p class="alert-block information footnote report-issues">If you notice any kind of problem with this page’s construction or content (theme doesn’t work as stated, outdated information, typos, broken links, or whatever), <a rel="external" target="_blank" href="https://github.com/textpattern/textpattern-curated-themes-list/issues/new/choose">open an issue</a> and we’ll investigate.</p>
                     </article>
