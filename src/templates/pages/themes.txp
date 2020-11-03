@@ -201,6 +201,21 @@
                         <txp:if_variable not name="json-name">
                             <p class="alert-block error">Theme resources not currently available. If this problem persists, <a href="https://github.com/textpattern/textpattern-curated-themes-list/issues/new?labels=theme-broken&amp;template=report-a-broken-textpattern-theme-listing.md&amp;title=%5BBROKEN%5D+<txp:article_url_title escape="json" />">open an issue</a> and we’ll investigate.</p>
                         <txp:else />
+                            <div class="tabular-data" itemscope itemtype="https://schema.org/Table">
+                                <table>
+                                    <caption itemprop="about">Theme </caption>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Theme is small-screen compatible (responsive)</th>
+                                            <td>TBC</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Theme is right-to-left language compatible</th>
+                                            <td>TBC</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                             <txp:if_variable name="json-demo">
                                 <h3 id="demo">Live demo</h3>
                                 <p><a target="_blank" rel="external noopener" href="<txp:variable name="json-demo" />">View a live demo of this theme (opens a new browser tab/window)</a>.</p>
