@@ -1,7 +1,6 @@
 # Textpattern themes website
 
 [![Build Status](https://travis-ci.com/textpattern/textpattern-themes-website.svg)](https://travis-ci.com/textpattern/textpattern-themes-website)
-[![Known Vulnerabilities](https://snyk.io/test/github/textpattern/textpattern-themes-website/badge.svg?targetFile=package.json)](https://snyk.io/test/github/textpattern/textpattern-themes-website?targetFile=package.json)
 
 **CURRENTLY UNDER DEVELOPMENT**
 
