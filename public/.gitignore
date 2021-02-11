@@ -5,8 +5,9 @@
 /images
 /index.php
 /library-of-themes
-/themes-internal/*/
 /textpattern
+/themes-internal/*/
 /vendor
-/*.png
 /*.ico
+/*.png
+/*.svg
