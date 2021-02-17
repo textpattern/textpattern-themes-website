@@ -12,6 +12,7 @@
             <meta name="description" content="Textpattern themes ‘<txp:category title />’ category.">
             <meta name="robots" content="noindex, follow">
         <txp:else />
+            <link rel="preload" as="image" href="/assets/img/com/index-themes.png" imagesrcset="/assets/img/com/index-themes.png 1x, /assets/img/com/index-themes@2x.png 2x">
             <title>Textpattern CMS themes | Themes for the Textpattern content management system</title>
             <meta name="description" content="A curated collection of website themes, website templates and web development frameworks for Textpattern CMS.">
             <meta name="keywords" content="themes, templates, websites, frameworks, cms, content management systems, open source, blogs, blogging, free, web design, web site design, web development, web site development, php, foss">
@@ -55,7 +56,7 @@
                 <h1>Textpattern themes <small class="alert-block alert-pill warning">PRE-ALPHA</small></h1>
                 <section class="showcase-themes-container">
                     <h2>Featured themes</h2>
-                    <h3>110% Awesome Themes</h3>
+                    <img loading="lazy" class="showcase-rosette dark-contrast" width="132" height="200" alt="110% Awesome Themes" src="/assets/img/com/index-themes-showcase.png" srcset="/assets/img/com/index-themes-showcase@2x.png 2x">
                     <txp:article_custom form="article_listing" section="themes" category="featured" sort="custom_1" limit="8" wraptag="div" class="layout-container" />
                 </section>
                 <section>
