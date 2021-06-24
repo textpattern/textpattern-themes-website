@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "grunt": "1.4.1",
-    "grunt-cli": "1.4.3",n
+    "grunt-cli": "1.4.3",
     "grunt-concurrent": "3.0.0",
     "grunt-contrib-clean": "2.0.0",
     "grunt-contrib-copy": "1.0.0",
@@ -25,7 +25,7 @@
   "browserslist": [
     "> 0.5%",
     "Firefox ESR",
-    "IE 11"
+    "not IE 11"
   ],
   "scripts": {
     "test": "grunt travis --verbose"
