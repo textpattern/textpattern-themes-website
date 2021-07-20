@@ -74,7 +74,17 @@
         </div>
         <div class="wrapper-inner zebra">
             <div class="container">
-                <p><img loading="lazy" class="screen-large prefers-color-scheme" width="1150" height="494" alt="Textpattern Theme Painter with Pictures" src="/assets/img/index-themes-painting-collection.png" data-src-light="/assets/img/index-themes-painting-collection.png" data-src-dark="/assets/img/dark-index-themes-painting-collection.png" srcset="/assets/img/index-themes-painting-collection@2x.png 2x" data-srcset-light="/assets/img/index-themes-painting-collection@2x.png 2x" data-srcset-dark="/assets/img/dark-index-themes-painting-collection@2x.png 2x"><img loading="lazy" class="screen-small prefers-color-scheme" width="620" height="477" alt="Textpattern Theme Painter" src="/assets/img/index-themes-painting.png" data-src-light="/assets/img/index-themes-painting.png" data-src-dark="/assets/img/dark-index-themes-painting.png"></p>
+                <p>
+                    <picture class="screen-large">
+                        <source srcset="/assets/img/dark-index-themes-painting-collection.png, /assets/img/dark-index-themes-painting-collection@2x.png 2x" type="image/png" media="(prefers-color-scheme: dark)">
+                        <source srcset="/assets/img/index-themes-painting-collection.png, /assets/img/index-themes-painting-collection@2x.png 2x" type="image/png">
+                        <img loading="lazy" decoding="async" width="1150" height="494" alt="Textpattern Theme Painter with Pictures" src="/assets/img/index-themes-painting-collection.png">
+                    </picture>
+                    <picture class="screen-small">
+                        <source srcset="/assets/img/dark-index-themes-painting.png" type="image/png" media="(prefers-color-scheme: dark)">
+                        <img loading="lazy" decoding="async" width="620" height="477" alt="Textpattern Theme Painter" src="/assets/img/index-themes-painting.png">
+                    </picture>
+                </p>
             </div>
         </div>
         <div class="wrapper-inner">
